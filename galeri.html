@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 250px;
+      height: 180px;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+    <h1>Fotoğraf Galerisi</h1>
+
+  <div class="gallery">
+    <img src="images/s1.jpg" alt="Fotoğraf 1" onclick="openModal(this.src)">
+    <img src="images/s2.jpg" alt="Fotoğraf 2" onclick="openModal(this.src)">
+    <img src="images/s3.jpg" alt="Fotoğraf 3" onclick="openModal(this.src)">
+    <img src="images/s4.jpg" alt="Fotoğraf 4" onclick="openModal(this.src)">
+    <img src="images/s5.jpg" alt="Fotoğraf 5" onclick="openModal(this.src)">
+    <img src="images/s6.jpg" alt="Fotoğraf 6" onclick="openModal(this.src)">
+    <img src="images/s7.jpg" alt="Fotoğraf 7" onclick="openModal(this.src)">
+    <img src="images/s8.jpg" alt="Fotoğraf 8" onclick="openModal(this.src)">
+    <img src="images/s9.jpg" alt="Fotoğraf 9" onclick="openModal(this.src)">
+    <img src="images/s10.jpg" alt="Fotoğraf 10" onclick="openModal(this.src)">
+    <img src="images/s11.jpg" alt="Fotoğraf 11" onclick="openModal(this.src)">
+    <img src="images/s12h.jpg" alt="Fotoğraf 12" onclick="openModal(this.src)">
+    <img src="images/s13.jpg" alt="Fotoğraf 13" onclick="openModal(this.src)">
+    <img src="images/s14.jpg" alt="Fotoğraf 14" onclick="openModal(this.src)">
+    <img src="images/s15.jpg" alt="Fotoğraf 15" onclick="openModal(this.src)">
+    <img src="images/s16.jpg" alt="Fotoğraf 16" onclick="openModal(this.src)">
+    <img src="images/s17.jpg" alt="Fotoğraf 17" onclick="openModal(this.src)">
+    <img src="images/s18.jpg" alt="Fotoğraf 18" onclick="openModal(this.src)">
+    <img src="images/s19i.jpg" alt="Fotoğraf 19" onclick="openModal(this.src)">
+    <img src="images/s20.jpg" alt="Fotoğraf 20" onclick="openModal(this.src)">
+    <img src="images/s21.jpg" alt="Fotoğraf 21" onclick="openModal(this.src)">
+    <img src="images/s22.jpg" alt="Fotoğraf 22" onclick="openModal(this.src)">
+
+  </div>
+
+<div id="modal" onclick="closeModal()" style="
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  text-align: center;
+  padding-top: 60px;">
+  <img id="modal-img" src="" style="
+    max-width: 90%;
+    max-height: 80vh;
+    box-shadow: 0 0 20px white;">
+</div>
+
+
+ <script>
+  function openModal(src) {
+    document.getElementById("modal").style.display = "block";
+    document.getElementById("modal-img").src = src;
+  }
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+</script>
+ 
+</body>
+</html>
